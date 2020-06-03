@@ -1,1 +1,2 @@
 #!/bin/bash
+sudo mv [[:upper:]]* /tmp/u  
