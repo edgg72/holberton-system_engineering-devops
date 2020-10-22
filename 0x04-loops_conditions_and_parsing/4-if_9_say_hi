@@ -5,7 +5,7 @@ while [ $i -lt 11 ]
 do
     if [[ $i -eq 9 ]]
     then
-        echo "hi"
+        echo "Hi"
     else
         echo "Holberton School"
     fi
