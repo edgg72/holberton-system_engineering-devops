@@ -1,15 +1,15 @@
 # Client configuration file (w/ Puppet)
 
 include stdlib
-file_line { 'Turn off passwd auth':
+file_line { 'no password authentication':
   ensure  => 'present',
-  line    => '    PasswordAuthentication no',
+  line    => 'PasswordAuthentication no',
   path    => '/etc/ssh/ssh_config',
   match   => '^PasswordAuthentication',
   replace => true,
 }
-file_line { 'Declare identity file':
+file_line { 'identity file':
   ensure => 'present',
-  line   => '    IdentityFile ~/.ssh/holberton',
+  line   => 'IdentityFile ~/.ssh/holberton',
   path   => '/etc/ssh/ssh_config',
 }
